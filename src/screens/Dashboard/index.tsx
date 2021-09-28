@@ -88,6 +88,7 @@ export const Dashboard = () => {
         <S.Title>Listagem</S.Title>
         <S.TransactionList
           data={data}
+          keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => <TransactionCard data={item} />}
         />
       </S.Transactions>
